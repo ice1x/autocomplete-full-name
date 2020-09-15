@@ -5,6 +5,6 @@ from prefix_trie import client
 app = FastAPI()
 
 
-@app.get("/suggest/{letter}")
-async def suggest(letter):
-    return client.suggest(letter)
+@app.get("/suggest/{query}&{count}")
+async def suggest(query: str, count: int):
+    return client.suggest(query, count)
