@@ -1,9 +1,9 @@
-from trie import Trie
+from .trie import Trie
 
 
 def get_trie():
     trie = Trie()
-    with open("./test_dataset.txt", "r") as f:
+    with open("./prefix_trie/test_dataset.txt", "r") as f:
         for line in f.readlines():
             data_line = line.split(',')
             trie.insert(
@@ -19,7 +19,6 @@ def get_trie():
 
 
 TRIE = get_trie()
-print(1)
 
 
 def suggest(letter):
