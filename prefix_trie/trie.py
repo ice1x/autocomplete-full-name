@@ -5,7 +5,7 @@ Prefix Trie
 
 class Singleton(type):
     _instances = {}
-    
+
     def __call__(cls, *args, **kwargs):
         if cls not in cls._instances:
             cls._instances[cls] = super(Singleton, cls).__call__(*args, **kwargs)
@@ -16,6 +16,7 @@ class Node(object):
     """
     Class describes the data structure of node
     """
+
     def __init__(self, char, data):
         self.char = char
         self.level = 0
@@ -95,6 +96,7 @@ class Trie(Node, metaclass=Singleton):
         Return:
             result(list): - contain list of data(dict) inside
         """
+
         def _get_data_by_child(parent, result):
             """
             Iterator
@@ -144,7 +146,7 @@ class Trie(Node, metaclass=Singleton):
         Return:
             result(list): list of dict's
         """
-        return self. _sort_desc(self._get_data_by_node(self._get_last_node_by_prefix(prefix)), key_)
+        return self._sort_desc(self._get_data_by_node(self._get_last_node_by_prefix(prefix)), key_)
 
     def get_by_prefix_and_query(self, prefix, query):
         """

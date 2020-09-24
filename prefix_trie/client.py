@@ -1,5 +1,8 @@
 from .trie import Trie
 
+GENDER_MAPPING = {'t': 'male', 'f': 'female', None: 'unknown'}
+TYPE_MAPPING = {'t': 'firstname', 'f': 'middlename', '': 'lastname'}
+
 
 def get_trie():
     """
@@ -18,7 +21,7 @@ def get_trie():
                     'name': data[0],
                     'amount': data[1],
                     'gender': data[2],
-                    'type': data[3]
+                    'type': data[3].strip()
                 }
             )
     return trie
@@ -37,4 +40,13 @@ def suggest(query: str, count: int):
     Returns:
         list(dict): suggestions
     """
-    return TRIE.get_by_prefix_sort_desc_by(query, 'amount')[:count]
+    if count > 100:
+        count = 100
+    result = TRIE.get_by_prefix_sort_desc_by(query, 'amount')[:count]
+    output = []
+    for row in result:
+        output_row = row.copy()
+        output_row['type'] = TYPE_MAPPING.get(output_row['type'])
+        output_row['gender'] = GENDER_MAPPING.get(output_row['gender'])
+        output.append(output_row)
+    return output
