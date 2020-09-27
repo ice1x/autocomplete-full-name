@@ -119,11 +119,11 @@ class Trie(Node, metaclass=Singleton):
         Descending sorting by key_
         Args:
             source(list): list of dict's should contain the key: key_
-            key_(str): key to sort by
+            key_(str): key to sort by, value should be integer
         Return:
             data_sorted(list): list sorted by key_
         """
-        data_sorted = sorted(source, key=lambda value: value[key_])
+        data_sorted = sorted(source, key=lambda value: int(value[key_]))
         data_sorted.reverse()
         return data_sorted
 
