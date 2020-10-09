@@ -1,3 +1,4 @@
+# -*- coding: utf-8 -*-
 from .trie import Trie
 
 GENDER_MAPPING = {'t': 'male', 'f': 'female', None: 'unknown'}
