@@ -19,7 +19,7 @@ def get_trie():
             trie.insert(
                 data[0],
                 {
-                    'name': data[0],
+                    'name': data[0].encode('utf-8'),
                     'amount': data[1],
                     'gender': data[2],
                     'type': data[3].strip()
