@@ -76,11 +76,11 @@ def parse(query: str):
     Returns:
         list(dict): full name parsed
     """
-    words = query.split()
+    tokens = query.split()
     result = []
-    for word in words:
-        word_parse_result = TRIE.get_by_word_and_query(word, {})
-        if not word_parse_result:
+    for token in tokens:
+        token_parse_result = TRIE.get_by_word_and_query(token, {})
+        if not token_parse_result:
             continue
-        result.append(word_parse_result)
+        result.append(token_parse_result)
     return replace_placeholders(result)
