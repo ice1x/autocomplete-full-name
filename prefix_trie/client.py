@@ -30,6 +30,25 @@ def get_trie():
 TRIE = get_trie()
 
 
+def replace_placeholders(source_data):
+    """
+    Replace placeholders by user-friendly values
+    Args:
+        source_data(list): list of dict's with data from Trie
+
+    Returns:
+        (list): list of dict's with data from Trie with replaced placeholders
+
+    """
+    output = []
+    for row in source_data:
+        output_row = row.copy()
+        output_row['type'] = TYPE_MAPPING.get(output_row['type'])
+        output_row['gender'] = GENDER_MAPPING.get(output_row['gender'])
+        output.append(output_row)
+    return output
+
+
 def suggest(query: str, count: int):
     """
     Get suggestions by name prefix
@@ -43,10 +62,24 @@ def suggest(query: str, count: int):
     if count > 100:
         count = 100
     result = TRIE.get_by_prefix_sort_desc_by(query, 'amount')[:count]
-    output = []
-    for row in result:
-        output_row = row.copy()
-        output_row['type'] = TYPE_MAPPING.get(output_row['type'])
-        output_row['gender'] = GENDER_MAPPING.get(output_row['gender'])
-        output.append(output_row)
-    return output
+    return replace_placeholders(result)
+
+
+def parse(query: str):
+    """
+    Parse full name by text string
+
+    Args:
+        query(str): text string which may contain full name
+
+    Returns:
+        list(dict): full name parsed
+    """
+    words = query.split()
+    result = []
+    for word in words:
+        word_parse_result = TRIE.get_by_word_and_query(word, {})
+        if not word_parse_result:
+            continue
+        result.append(word_parse_result)
+    return replace_placeholders(result)
