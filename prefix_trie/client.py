@@ -1,5 +1,6 @@
-# -*- coding: utf-8 -*-
+import json
 from .trie import Trie
+from starlette.responses import PlainTextResponse
 
 GENDER_MAPPING = {'t': 'male', 'f': 'female', None: 'unknown'}
 TYPE_MAPPING = {'t': 'firstname', 'f': 'middlename', '': 'lastname'}
@@ -19,7 +20,7 @@ def get_trie():
             trie.insert(
                 data[0],
                 {
-                    'name': data[0].encode('utf-8'),
+                    'name': data[0],
                     'amount': data[1],
                     'gender': data[2],
                     'type': data[3].strip()
@@ -38,7 +39,7 @@ def replace_placeholders(source_data):
         source_data(list): list of dict's with data from Trie
 
     Returns:
-        (list): list of dict's with data from Trie with replaced placeholders
+        (starlette.responses.PlainTextResponse): list of dict's->JSON with data from Trie with replaced placeholders
 
     """
     output = []
@@ -47,7 +48,8 @@ def replace_placeholders(source_data):
         output_row['type'] = TYPE_MAPPING.get(output_row['type'])
         output_row['gender'] = GENDER_MAPPING.get(output_row['gender'])
         output.append(output_row)
-    return output
+    print(type(PlainTextResponse(json.dumps(output, ensure_ascii=False))))
+    return PlainTextResponse(json.dumps(output, ensure_ascii=False))
 
 
 def suggest(query: str, count: int):
@@ -58,7 +60,7 @@ def suggest(query: str, count: int):
         count(int): max length of suggestion list
 
     Returns:
-        list(dict): suggestions
+        (starlette.responses.PlainTextResponse): suggestions
     """
     if count > 100:
         count = 100
@@ -74,7 +76,7 @@ def parse(query: str):
         query(str): text string which may contain full name
 
     Returns:
-        list(dict): full name parsed
+        (starlette.responses.PlainTextResponse): full name parsed
     """
     tokens = query.split()
     result = []
