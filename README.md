@@ -14,5 +14,6 @@ https://autocomplete-full-name.herokuapp.com/parse/%D0%BE%D0%B4%D0%B8%D0%BD%20%D
 ## Changelog:
 * Python Prefix Trie inherited from https://github.com/ice1x/Python-Prefix-Tree
 * Integrated with FastAPI
+* Added deployment to Heroku
 * Fixed problem with Cyrillic UTF-8 text
 * Added Parse API method
