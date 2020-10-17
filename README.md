@@ -1,5 +1,5 @@
 # autocomplete-full-name
-Full name autocomplete REST API on FastAPI based on prefix-trie
+Full name autocomplete micro service based on prefix tree with FastAPI and deployment to Heroku
 
 Python Prefix Trie inherited from https://github.com/ice1x/Python-Prefix-Tree
 
@@ -12,3 +12,8 @@ https://autocomplete-full-name.herokuapp.com/suggest/%D0%B0%D0%BD%D1%82%D0%BE%D0
 * Parse
 Allows to get name tokens by abstract text string
 https://autocomplete-full-name.herokuapp.com/parse/%D0%BE%D0%B4%D0%B8%D0%BD%20%D0%B8%D0%B2%D0%B0%D0%BD%20%D0%B4%D0%B2%D0%B0%20%D0%B8%D0%B2%D0%B0%D0%BD%D0%BE%D0%B2%20%D1%82%D1%80%D0%B8%20%D0%B8%D0%B2%D0%B0%D0%BD%D0%BE%D0%B2%D0%B8%D1%87
+
+## Changelog:
+
+* Fixed problem with Cyrillic UTF-8 text
+* Added Parse API method
