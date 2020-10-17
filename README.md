@@ -3,6 +3,8 @@ Full name autocomplete REST API on FastAPI based on prefix-trie
 
 Python Prefix Trie inherited from https://github.com/ice1x/Python-Prefix-Tree
 
+## API methods:
+
 # Suggest
 Allows to get name suggestions by prefix
 https://autocomplete-full-name.herokuapp.com/suggest/%D0%B0%D0%BD%D1%82%D0%BE%D0%BD&10
