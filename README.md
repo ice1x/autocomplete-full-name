@@ -1,5 +1,4 @@
-# autocomplete-full-name
-Full name autocomplete micro service based on prefix tree with FastAPI and deployment to Heroku
+# Full name autocomplete micro service
 
 ## API methods:
 
