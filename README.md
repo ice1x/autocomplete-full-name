@@ -17,3 +17,7 @@ https://autocomplete-full-name.herokuapp.com/parse/?query=%D0%BE%D0%B4%D0%B8%D0%
 * Added test coverage
 * Fixed problem with Cyrillic UTF-8 text (affected Safari OSX/iOS)
 * Added Parse API method
+
+## Known issues:
+* Only russian names supported
+* Suggestions and parsing based of name list so if the name is absent in list it will not be parsed and suggested
