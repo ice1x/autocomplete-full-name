@@ -3,6 +3,20 @@ Prefix Trie
 """
 
 
+def sort_desc(source: list, key_: str) -> list:
+    """
+    Descending sorting by key_
+    Args:
+        source(list): list of dict's should contain the key: key_
+        key_(str): key to sort by, value should be integer
+    Return:
+        data_sorted(list): list sorted by key_
+    """
+    data_sorted = sorted(source, key=lambda value: int(value[key_]))
+    data_sorted.reverse()
+    return data_sorted
+
+
 class Singleton(type):
     _instances = {}
 
@@ -89,19 +103,6 @@ class Trie(Node, metaclass=Singleton):
             _result = self._get_data_by_child(parent.children[key], _result)
         return _result
 
-    def _sort_desc(self, source: list, key_: str) -> list:
-        """
-        Descending sorting by key_
-        Args:
-            source(list): list of dict's should contain the key: key_
-            key_(str): key to sort by, value should be integer
-        Return:
-            data_sorted(list): list sorted by key_
-        """
-        data_sorted = sorted(source, key=lambda value: int(value[key_]))
-        data_sorted.reverse()
-        return data_sorted
-
     def _get_by_prefix(self, prefix: str) -> list:
         """
         Get data where word starts with prefix
@@ -122,7 +123,7 @@ class Trie(Node, metaclass=Singleton):
         Return:
             result(list): list of dict's
         """
-        return self._sort_desc(self._get_by_prefix(prefix), key_)
+        return sort_desc(self._get_by_prefix(prefix), key_)
 
     def get_by_prefix_and_query(self, prefix: str, query: dict) -> list:
         """
@@ -144,20 +145,18 @@ class Trie(Node, metaclass=Singleton):
                 result.append(i)
         return result
 
-    def get_by_word_and_query(self, word: str, query: dict) -> dict:
+    def get_by_word_and_query(self, word: str, query: dict) -> dict or None:
         """
         Find node containing the word and return one data(dict) which is matched with query pattern
-        #TODO Add test coverage for bug:
-        #TODO if a query pattern match with more than one data(dict) but for name's it shouldn't
+
         Args:
             word(str): word to search node
             query(dict): pattern to match
         Return:
-            (dict):
+            (dict or None):
         """
-        tmp_result = self._get_last_node_by_prefix(word).data
         tmp_query = [(k, v) for k, v in query.items()]
-        for i in tmp_result:
+        for i in self._get_last_node_by_prefix(word).data:
             for j in tmp_query:
                 if j not in i.items():
                     break

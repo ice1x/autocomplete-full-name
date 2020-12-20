@@ -20,12 +20,12 @@ GENDER_REVERSED = {v: k for k, v in GENDER.items()}
 
 class TestSmallTrieMethods(unittest.TestCase):
     def test_get_by_word_and_query_ivan(self):
-        res = TRIE.get_by_word_and_query('иван', {'type': True})
-        self.assertEqual(res, {'name': 'иван', 'gender': True, 'type': True})
+        res = TRIE.get_by_word_and_query('иван', {'type': 't'})
+        self.assertEqual(res, {'name': 'иван', 'amount': '25836', 'gender': 't', 'type': 't'})
 
     def test_get_by_word_and_query_anton(self):
-        res = TRIE.get_by_word_and_query('антон', {'type': True})
-        self.assertEqual(res, {'name': 'антон', 'gender': True, 'type': True})
+        res = TRIE.get_by_word_and_query('антон', {'type': 't'})
+        self.assertEqual(res, {'name': 'антон', 'amount': '20633', 'gender': 't', 'type': 't'})
 
 
 if __name__ == '__main__':
