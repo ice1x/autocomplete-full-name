@@ -1,7 +1,6 @@
-import datetime
 import unittest
 
-from prefix_trie.client import TRIE
+from trie_client import TRIE
 
 
 GENDER = {
