@@ -1,5 +1,5 @@
 import json
-from .trie import Trie
+from prefix_tree.trie import Trie
 from starlette.responses import PlainTextResponse
 
 GENDER_MAPPING = {'t': 'male', 'f': 'female', None: 'unknown'}
@@ -14,7 +14,7 @@ def get_trie():
         (Trie): prefix trie with loaded data
     """
     trie = Trie()
-    with open("./prefix_trie/test_dataset.txt", "r") as f:
+    with open("test_dataset.txt", "r") as f:
         for line in f.readlines():
             data = line.split(',')
             trie.insert(
