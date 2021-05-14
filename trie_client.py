@@ -1,4 +1,6 @@
 import json
+from typing import List, Text
+
 from prefix_tree.trie import Trie
 from starlette.responses import PlainTextResponse
 
@@ -6,7 +8,7 @@ GENDER_MAPPING = {'t': 'male', 'f': 'female', None: 'unknown'}
 TYPE_MAPPING = {'t': 'firstname', 'f': 'middlename', '': 'lastname'}
 
 
-def get_trie():
+def get_trie() -> Trie:
     """
     Load data to prefix trie
 
@@ -32,7 +34,7 @@ def get_trie():
 TRIE = get_trie()
 
 
-def replace_placeholders(source_data):
+def replace_placeholders(source_data: List) -> PlainTextResponse:
     """
     Replace placeholders by user-friendly values
     Args:
@@ -52,7 +54,7 @@ def replace_placeholders(source_data):
     return PlainTextResponse(json.dumps(output, ensure_ascii=False))
 
 
-def suggest(query: str, count: int):
+def suggest(query: Text, count: int) -> PlainTextResponse:
     """
     Get suggestions by name prefix
     Args:
@@ -68,7 +70,7 @@ def suggest(query: str, count: int):
     return replace_placeholders(result)
 
 
-def parse(query: str):
+def parse(query: Text) -> PlainTextResponse:
     """
     Parse full name by text string
 
