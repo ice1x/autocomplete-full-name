@@ -3,7 +3,7 @@ from typing import Text
 from fastapi import FastAPI
 from starlette.responses import PlainTextResponse
 
-import trie_client
+from app import trie_client
 
 app = FastAPI()
 

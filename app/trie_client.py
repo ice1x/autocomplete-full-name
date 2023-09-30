@@ -16,7 +16,7 @@ def get_trie() -> Trie:
         (Trie): prefix trie with loaded data
     """
     trie = Trie()
-    with open("test_dataset.txt", "r") as f:
+    with open("app/test_dataset.txt", "r") as f:
         for line in f.readlines():
             data = line.split(',')
             trie.insert(
