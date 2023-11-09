@@ -100,7 +100,7 @@ Full tech stack [here](/techstack.md)
 
 |NAME|VERSION|LAST UPDATED|LAST UPDATED BY|LICENSE|VULNERABILITIES|
 |:------|:------|:------|:------|:------|:------|
-|[pydantic](https://pypi.org/pydantic)|v2.4.2|09/30/23|ilya.iakhin |MIT|N/A|
+|[pydantic](https://pypi.org/pydantic)|v2.4.2|09/30/23|ice1x |MIT|N/A|
 
 <br/>
 <div align='center'>
