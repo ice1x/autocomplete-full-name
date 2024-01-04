@@ -1,11 +1,12 @@
 repo_name: ice1x/autocomplete-full-name
-report_id: 29db8c56616f7c855b020f363088c278
+report_id: 97fe8b1d8109b510a5773c8a2d737e08
+version: 0.1
 repo_type: Public
-timestamp: '2023-12-14T09:25:42+00:00'
+timestamp: '2024-01-04T14:53:32+00:00'
 requested_by: ice1x
 provider: github
 branch: master
-detected_tools_count: 16
+detected_tools_count: 17
 tools:
 - name: Python
   description: A clear and powerful object-oriented programming language, comparable
@@ -16,6 +17,7 @@ tools:
   category: Languages & Frameworks
   sub_category: Languages
   image_url: https://img.stackshare.io/service/993/pUBY5pVj.png
+  detection_source_url: https://github.com/ice1x/autocomplete-full-name
   detection_source: Repo Metadata
 - name: FastAPI
   description: A high performance, easy to learn, fast to code, ready for production
@@ -27,6 +29,7 @@ tools:
   category: Languages & Frameworks
   sub_category: Microframeworks (Backend)
   image_url: https://img.stackshare.io/service/25014/default_f6ff39141b468e832d1bc59fc98a060df604d44d.png
+  detection_source_url: https://github.com/ice1x/autocomplete-full-name/blob/master/requirements.txt
   detection_source: requirements.txt
   last_updated_by: cold00n
   last_updated_on: 2021-10-25 15:17:41.000000000 Z
@@ -38,6 +41,7 @@ tools:
   category: Data Stores
   sub_category: Database Tools
   image_url: https://img.stackshare.io/service/109221/default_b888cdf5617d936aa6aacf130911906955508639.png
+  detection_source_url: https://github.com/ice1x/autocomplete-full-name/blob/master/app/test_dataset.txt
   detection_source: app/test_dataset.txt
 - name: Docker
   description: Enterprise Container Platform for High-Velocity Innovation.
@@ -48,6 +52,7 @@ tools:
   category: Build, Test, Deploy
   sub_category: Virtual Machine Platforms & Containers
   image_url: https://img.stackshare.io/service/586/n4u37v9t_400x400.png
+  detection_source_url: https://github.com/ice1x/autocomplete-full-name
   detection_source: Repo Metadata
 - name: Git
   description: Fast, scalable, distributed revision control system
@@ -57,6 +62,7 @@ tools:
   category: Build, Test, Deploy
   sub_category: Version Control System
   image_url: https://img.stackshare.io/service/1046/git.png
+  detection_source_url: https://github.com/ice1x/autocomplete-full-name
   detection_source: Repo Metadata
 - name: PyPI
   description: A repository of software for the Python programming language
@@ -66,6 +72,7 @@ tools:
   category: Build, Test, Deploy
   sub_category: Hosted Package Repository
   image_url: https://img.stackshare.io/service/12572/-RIWgodF_400x400.jpg
+  detection_source_url: https://github.com/ice1x/autocomplete-full-name/blob/master/requirements.txt
   detection_source: requirements.txt
   last_updated_by: cold00n
   last_updated_on: 2021-10-25 15:17:41.000000000 Z
@@ -77,6 +84,7 @@ tools:
   category: Communications
   sub_category: Large Language Model Tools
   image_url: https://img.stackshare.io/service/48790/default_5b6c6b73f1ff3775c85d2a1ba954cb87e30cbf13.jpg
+  detection_source_url: https://github.com/ice1x/autocomplete-full-name/blob/master/app/test_dataset.txt
   detection_source: app/test_dataset.txt
 - name: Websockets
   description: A technology that makes it possible to open a two-way interactive communication
@@ -197,6 +205,20 @@ tools:
   category: Libraries
   sub_category: PyPI Packages
   image_url: https://img.stackshare.io/package/20187/default_c5c395350b07388a35a5e9efffb0ea706d6e196d.png
+  detection_source_url: https://github.com/ice1x/autocomplete-full-name/blob/master/requirements.txt
+  detection_source: requirements.txt
+  last_updated_by: ilya.iakhin
+  last_updated_on: 2023-09-30 14:30:05.000000000 Z
+- name: websockets
+  description: An implementation of the WebSocket Protocol
+  package_url: https://pypi.org/project/websockets
+  version: 11.0.3
+  license: BSD-3-Clause
+  open_source: true
+  hosted_saas: false
+  category: Libraries
+  sub_category: PyPI Packages
+  image_url: https://img.stackshare.io/package/19951/default_fbe690a687f1af7dc36ac3d526708be3294c4cc9.png
   detection_source_url: https://github.com/ice1x/autocomplete-full-name/blob/master/requirements.txt
   detection_source: requirements.txt
   last_updated_by: ilya.iakhin
