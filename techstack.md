@@ -32,7 +32,7 @@ Full tech stack [here](/techstack.md)
 # Tech Stack File
 ![](https://img.stackshare.io/repo.svg "repo") [ice1x/autocomplete-full-name](https://github.com/ice1x/autocomplete-full-name)![](https://img.stackshare.io/public_badge.svg "public")
 <br/><br/>
-|16<br/>Tools used|12/14/23 <br/>Report generated|
+|17<br/>Tools used|01/04/24 <br/>Report generated|
 |------|------|
 </div>
 
@@ -126,9 +126,9 @@ Full tech stack [here](/techstack.md)
 </table>
 
 
-## <img src='https://img.stackshare.io/group.svg' /> Open source packages (8)</h2>
+## <img src='https://img.stackshare.io/group.svg' /> Open source packages (9)</h2>
 
-## <img width='24' height='24' src='https://img.stackshare.io/service/12572/-RIWgodF_400x400.jpg'/> PyPI (8)
+## <img width='24' height='24' src='https://img.stackshare.io/service/12572/-RIWgodF_400x400.jpg'/> PyPI (9)
 
 |NAME|VERSION|LAST UPDATED|LAST UPDATED BY|LICENSE|VULNERABILITIES|
 |:------|:------|:------|:------|:------|:------|
@@ -140,6 +140,7 @@ Full tech stack [here](/techstack.md)
 |[starlette](https://pypi.org/project/starlette)|v0.27.0|06/07/23|dependabot[bot] |BSD-3-Clause|N/A|
 |[uvicorn](https://pypi.org/project/uvicorn)|v0.23.2|09/30/23|ilya.iakhin |BSD-3-Clause|N/A|
 |[uvloop](https://pypi.org/project/uvloop)|v0.17.0|09/30/23|ilya.iakhin |Apache-2.0|N/A|
+|[websockets](https://pypi.org/project/websockets)|v11.0.3|09/30/23|ilya.iakhin |BSD-3-Clause|N/A|
 
 <br/>
 <div align='center'>
