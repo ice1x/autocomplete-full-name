@@ -5,9 +5,9 @@ ice1x/autocomplete-full-name is built on the following main stack:
 
 - [Python](https://www.python.org) – Languages
 - [FastAPI](https://fastapi.tiangolo.com/) – Microframeworks (Backend)
-- [LangChain](https://github.com/hwchase17/langchain) – Large Language Model Tools
 - [pgvector](https://github.com/pgvector/pgvector/) – Database Tools
 - [Docker](https://www.docker.com/) – Virtual Machine Platforms & Containers
+- [LangChain](https://github.com/hwchase17/langchain) – Large Language Model Tools
 
 Full tech stack [here](/techstack.md)
 
@@ -19,9 +19,9 @@ ice1x/autocomplete-full-name is built on the following main stack:
 
 - <img width='25' height='25' src='https://img.stackshare.io/service/993/pUBY5pVj.png' alt='Python'/> [Python](https://www.python.org) – Languages
 - <img width='25' height='25' src='https://img.stackshare.io/service/25014/default_f6ff39141b468e832d1bc59fc98a060df604d44d.png' alt='FastAPI'/> [FastAPI](https://fastapi.tiangolo.com/) – Microframeworks (Backend)
-- <img width='25' height='25' src='https://img.stackshare.io/service/48790/default_5b6c6b73f1ff3775c85d2a1ba954cb87e30cbf13.jpg' alt='LangChain'/> [LangChain](https://github.com/hwchase17/langchain) – Large Language Model Tools
 - <img width='25' height='25' src='https://img.stackshare.io/service/109221/default_b888cdf5617d936aa6aacf130911906955508639.png' alt='pgvector'/> [pgvector](https://github.com/pgvector/pgvector/) – Database Tools
 - <img width='25' height='25' src='https://img.stackshare.io/service/586/n4u37v9t_400x400.png' alt='Docker'/> [Docker](https://www.docker.com/) – Virtual Machine Platforms & Containers
+- <img width='25' height='25' src='https://img.stackshare.io/service/48790/default_5b6c6b73f1ff3775c85d2a1ba954cb87e30cbf13.jpg' alt='LangChain'/> [LangChain](https://github.com/hwchase17/langchain) – Large Language Model Tools
 
 Full tech stack [here](/techstack.md)
 
@@ -32,7 +32,7 @@ Full tech stack [here](/techstack.md)
 # Tech Stack File
 ![](https://img.stackshare.io/repo.svg "repo") [ice1x/autocomplete-full-name](https://github.com/ice1x/autocomplete-full-name)![](https://img.stackshare.io/public_badge.svg "public")
 <br/><br/>
-|17<br/>Tools used|01/05/24 <br/>Report generated|
+|17<br/>Tools used|02/29/24 <br/>Report generated|
 |------|------|
 </div>
 
@@ -137,7 +137,7 @@ Full tech stack [here](/techstack.md)
 |[httptools](https://pypi.org/project/httptools)|v0.6.0|09/30/23|ilya.iakhin |MIT|N/A|
 |[httpx](https://pypi.org/project/httpx)|v0.25.0|09/30/23|ilya.iakhin |BSD-3-Clause|N/A|
 |[pydantic](https://pypi.org/project/pydantic)|v2.4.2|09/30/23|ilya.iakhin |MIT|N/A|
-|[starlette](https://pypi.org/project/starlette)|v0.27.0|06/07/23|dependabot[bot] |BSD-3-Clause|N/A|
+|[starlette](https://pypi.org/project/starlette)|v0.27.0|06/07/23|dependabot[bot] |BSD-3-Clause|[CVE-2024-24762](https://github.com/advisories/GHSA-2jv5-9r88-3w3p) (High)<br/>[](https://github.com/advisories/GHSA-93gm-qmq6-w238) (High)|
 |[uvicorn](https://pypi.org/project/uvicorn)|v0.23.2|09/30/23|ilya.iakhin |BSD-3-Clause|N/A|
 |[uvloop](https://pypi.org/project/uvloop)|v0.17.0|09/30/23|ilya.iakhin |Apache-2.0|N/A|
 |[websockets](https://pypi.org/project/websockets)|v11.0.3|09/30/23|ilya.iakhin |BSD-3-Clause|N/A|
