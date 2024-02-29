@@ -2,7 +2,7 @@ repo_name: ice1x/autocomplete-full-name
 report_id: 97fe8b1d8109b510a5773c8a2d737e08
 version: 0.1
 repo_type: Public
-timestamp: '2024-01-05T09:27:02+00:00'
+timestamp: '2024-02-29T18:01:17+00:00'
 requested_by: ice1x
 provider: github
 branch: master
@@ -181,6 +181,19 @@ tools:
   detection_source: requirements.txt
   last_updated_by: dependabot[bot]
   last_updated_on: 2023-06-07 13:22:37.000000000 Z
+  vulnerabilities:
+  - name: python-multipart vulnerable to Content-Type Header ReDoS
+    cve_id: CVE-2024-24762
+    cve_url: https://github.com/advisories/GHSA-2jv5-9r88-3w3p
+    detected_date: Feb 17
+    severity: high
+    first_patched: 0.36.2
+  - name: 'Duplicate Advisory: Starlette Content-Type Header ReDoS'
+    cve_id: 
+    cve_url: https://github.com/advisories/GHSA-93gm-qmq6-w238
+    detected_date: Feb 6
+    severity: high
+    first_patched: 0.36.2
 - name: uvicorn
   description: The lightning-fast ASGI server
   package_url: https://pypi.org/project/uvicorn
