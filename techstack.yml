@@ -1,11 +1,12 @@
 repo_name: ice1x/autocomplete-full-name
 report_id: 97fe8b1d8109b510a5773c8a2d737e08
+version: 0.1
 repo_type: Public
-timestamp: '2023-11-09T12:24:32+00:00'
+timestamp: '2024-02-29T18:01:17+00:00'
 requested_by: ice1x
 provider: github
 branch: master
-detected_tools_count: 7
+detected_tools_count: 17
 tools:
 - name: Python
   description: A clear and powerful object-oriented programming language, comparable
@@ -16,6 +17,7 @@ tools:
   category: Languages & Frameworks
   sub_category: Languages
   image_url: https://img.stackshare.io/service/993/pUBY5pVj.png
+  detection_source_url: https://github.com/ice1x/autocomplete-full-name
   detection_source: Repo Metadata
 - name: FastAPI
   description: A high performance, easy to learn, fast to code, ready for production
@@ -27,8 +29,9 @@ tools:
   category: Languages & Frameworks
   sub_category: Microframeworks (Backend)
   image_url: https://img.stackshare.io/service/25014/default_f6ff39141b468e832d1bc59fc98a060df604d44d.png
+  detection_source_url: https://github.com/ice1x/autocomplete-full-name/blob/master/requirements.txt
   detection_source: requirements.txt
-  last_updated_by: ice1x
+  last_updated_by: cold00n
   last_updated_on: 2021-10-25 15:17:41.000000000 Z
 - name: Docker
   description: Enterprise Container Platform for High-Velocity Innovation.
@@ -39,6 +42,7 @@ tools:
   category: Build, Test, Deploy
   sub_category: Virtual Machine Platforms & Containers
   image_url: https://img.stackshare.io/service/586/n4u37v9t_400x400.png
+  detection_source_url: https://github.com/ice1x/autocomplete-full-name
   detection_source: Repo Metadata
 - name: Git
   description: Fast, scalable, distributed revision control system
@@ -48,6 +52,7 @@ tools:
   category: Build, Test, Deploy
   sub_category: Version Control System
   image_url: https://img.stackshare.io/service/1046/git.png
+  detection_source_url: https://github.com/ice1x/autocomplete-full-name
   detection_source: Repo Metadata
 - name: PyPI
   description: A repository of software for the Python programming language
@@ -57,26 +62,41 @@ tools:
   category: Build, Test, Deploy
   sub_category: Hosted Package Repository
   image_url: https://img.stackshare.io/service/12572/-RIWgodF_400x400.jpg
+  detection_source_url: https://github.com/ice1x/autocomplete-full-name/blob/master/requirements.txt
   detection_source: requirements.txt
-  last_updated_by: ice1x
+  last_updated_by: cold00n
   last_updated_on: 2021-10-25 15:17:41.000000000 Z
-- name: Uvicorn
-  description: The lightning-fast ASGI server
-  website_url: https://www.uvicorn.org/
-  version: 0.23.2
+- name: httptools
+  description: A collection of framework independent HTTP protocol utils
+  package_url: https://pypi.org/project/httptools
+  version: 0.6.0
+  license: MIT
+  open_source: true
+  hosted_saas: false
+  category: Libraries
+  sub_category: PyPI Packages
+  image_url: https://img.stackshare.io/package/pypi/image.png
+  detection_source_url: https://github.com/ice1x/autocomplete-full-name/blob/master/requirements.txt
+  detection_source: requirements.txt
+  last_updated_by: ilya.iakhin
+  last_updated_on: 2023-09-30 14:30:05.000000000 Z
+- name: httpx
+  description: The next generation HTTP client
+  package_url: https://pypi.org/project/httpx
+  version: 0.25.0
   license: BSD-3-Clause
   open_source: true
   hosted_saas: false
-  category: Application Hosting
-  sub_category: Web Servers
-  image_url: https://img.stackshare.io/service/12834/uvicorn.png
-  detection_source_url: requirements.txt
+  category: Libraries
+  sub_category: PyPI Packages
+  image_url: https://img.stackshare.io/package/20315/default_5f4e928dbcb1c4db4050881fc2e0229785fc931c.png
+  detection_source_url: https://github.com/ice1x/autocomplete-full-name/blob/master/requirements.txt
   detection_source: requirements.txt
-  last_updated_by: ice1x
+  last_updated_by: ilya.iakhin
   last_updated_on: 2023-09-30 14:30:05.000000000 Z
 - name: pydantic
   description: Data validation and settings management using python 3.6 type hinting
-  package_url: https://pypi.org/pydantic
+  package_url: https://pypi.org/project/pydantic
   version: 2.4.2
   license: MIT
   open_source: true
@@ -84,7 +104,76 @@ tools:
   category: Libraries
   sub_category: PyPI Packages
   image_url: https://img.stackshare.io/package/20022/default_b0d1a54f127d7017fce41c15f5e85568fb7019ed.png
-  detection_source_url: requirements.txt
+  detection_source_url: https://github.com/ice1x/autocomplete-full-name/blob/master/requirements.txt
   detection_source: requirements.txt
-  last_updated_by: ice1x
+  last_updated_by: ilya.iakhin
+  last_updated_on: 2023-09-30 14:30:05.000000000 Z
+- name: starlette
+  description: The little ASGI library that shines
+  package_url: https://pypi.org/project/starlette
+  version: 0.27.0
+  license: BSD-3-Clause
+  open_source: true
+  hosted_saas: false
+  category: Libraries
+  sub_category: PyPI Packages
+  image_url: https://img.stackshare.io/package/20295/default_640b00772a7025571fa2ac02de971e76f9662aa9.png
+  detection_source_url: https://github.com/ice1x/autocomplete-full-name/blob/master/requirements.txt
+  detection_source: requirements.txt
+  last_updated_by: dependabot[bot]
+  last_updated_on: 2023-06-07 13:22:37.000000000 Z
+  vulnerabilities:
+  - name: python-multipart vulnerable to Content-Type Header ReDoS
+    cve_id: CVE-2024-24762
+    cve_url: https://github.com/advisories/GHSA-2jv5-9r88-3w3p
+    detected_date: Feb 17
+    severity: high
+    first_patched: 0.36.2
+  - name: 'Duplicate Advisory: Starlette Content-Type Header ReDoS'
+    cve_id: 
+    cve_url: https://github.com/advisories/GHSA-93gm-qmq6-w238
+    detected_date: Feb 6
+    severity: high
+    first_patched: 0.36.2
+- name: uvicorn
+  description: The lightning-fast ASGI server
+  package_url: https://pypi.org/project/uvicorn
+  version: 0.23.2
+  license: BSD-3-Clause
+  open_source: true
+  hosted_saas: false
+  category: Libraries
+  sub_category: PyPI Packages
+  image_url: https://img.stackshare.io/package/20431/default_f824837db22536768ec317b67275fa384fad7d47.png
+  detection_source_url: https://github.com/ice1x/autocomplete-full-name/blob/master/requirements.txt
+  detection_source: requirements.txt
+  last_updated_by: ilya.iakhin
+  last_updated_on: 2023-09-30 14:30:05.000000000 Z
+- name: uvloop
+  description: Fast implementation of asyncio event loop on top of libuv
+  package_url: https://pypi.org/project/uvloop
+  version: 0.17.0
+  license: Apache-2.0
+  open_source: true
+  hosted_saas: false
+  category: Libraries
+  sub_category: PyPI Packages
+  image_url: https://img.stackshare.io/package/20187/default_c5c395350b07388a35a5e9efffb0ea706d6e196d.png
+  detection_source_url: https://github.com/ice1x/autocomplete-full-name/blob/master/requirements.txt
+  detection_source: requirements.txt
+  last_updated_by: ilya.iakhin
+  last_updated_on: 2023-09-30 14:30:05.000000000 Z
+- name: prefix-tree
+  description: An implementation of the Prefix Trie
+  package_url: https://pypi.org/project/prefix-tree/
+  version: 0.0.6
+  license: MIT License
+  open_source: true
+  hosted_saas: false
+  category: Libraries
+  sub_category: PyPI Packages
+  image_url: https://img.stackshare.io/package/19951/default_fbe690a687f1af7dc36ac3d526708be3294c4cc9.png
+  detection_source_url: https://github.com/ice1x/autocomplete-full-name/blob/master/requirements.txt
+  detection_source: requirements.txt
+  last_updated_by: ilya.iakhin
   last_updated_on: 2023-09-30 14:30:05.000000000 Z
